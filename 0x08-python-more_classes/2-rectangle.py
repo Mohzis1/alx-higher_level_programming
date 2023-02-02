@@ -36,7 +36,7 @@ class Rectangle:
         """retrieves height attribute"""
         return self.__height
 
-   @height.setter
+    @height.setter
     def height(self, value):
         """sets height attribute"""
         if not isinstance(value, int):
@@ -45,7 +45,7 @@ class Rectangle:
            raise ValueError("height must be >= 0")
         self.__height = value
 
-   def area(self):
+    def area(self):
         """Returns the area of the rectangle"""
         return (self.__width * self.__height)
 

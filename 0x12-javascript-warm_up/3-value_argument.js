@@ -4,4 +4,3 @@ if (process.argv[2]) {
 } else if (process.argv[1]) {
   console.log('No argument');
 }
-

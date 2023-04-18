@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-
-#This is a script that lists all states from the
-#database hbtn_0e_0_usa
-
+"""
+This a script that lists all states from the
+database hbtn_0e_0_usa
+:"""
 import MySQLdb
 import sys
-
-#Import the MySQLdb and sys module
-
+"""
+Import the MySQLdb and sys module
+"""
 
 if __name__ == "__main__":
-   
-# Access the database
-  
+    """
+    Access the database
+    """
     db = MySQLdb.connect(
             host="localhost",
             user=sys.argv[1],
@@ -21,9 +21,9 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
     cursor_obj = db.cursor()
-  
-# Creates the cursor object
-  
+    """
+    Creates the cursor object
+    """
     cursor_obj.execute("SELECT * FROM states")
     selected_rows = cursor_obj.fetchall()
     for row in selected_rows:
